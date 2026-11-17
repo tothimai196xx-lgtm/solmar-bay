@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solmar Bay — open-world crime game</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #0a1a28; font-family: 'Segoe UI', Arial, sans-serif; }
+  #game { display: block; width: 100%; height: 100%; }
+  .panel { position: absolute; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.8); pointer-events: none; }
+  #topleft { top: 14px; left: 16px; font-size: 20px; font-weight: 700; }
+  #topleft .row { margin-bottom: 4px; }
+  #healthbar-wrap { width: 180px; height: 10px; background: rgba(0,0,0,.55); border-radius: 5px; overflow: hidden; }
+  #healthbar { height: 100%; width: 100%; background: #53d769; }
+  #ammo { font-size: 15px; font-weight: 600; opacity: .9; }
+  #topright { top: 14px; right: 16px; text-align: right; }
+  #stars { font-size: 26px; letter-spacing: 2px; }
+  #clock { font-size: 18px; font-weight: 700; }
+  #speed { font-size: 15px; opacity: .9; }
+  #mission { top: 14px; left: 50%; transform: translateX(-50%); text-align: center; background: rgba(0,0,0,.45); padding: 8px 18px; border-radius: 10px; max-width: 520px; }
+  #mission-title { font-size: 17px; font-weight: 800; color: #ffd23e; }
+  #mission-objective { font-size: 14px; }
+  #mission-timer { font-size: 14px; font-weight: 700; color: #ff8a5a; }
+  #flash { top: 108px; left: 50%; transform: translateX(-50%); font-size: 17px; font-weight: 700; color: #ffd23e; opacity: 0; transition: opacity .4s; background: rgba(0,0,0,.45); padding: 6px 14px; border-radius: 8px; }
+  #dialogue { display: none; bottom: 120px; left: 50%; transform: translateX(-50%); width: 560px; max-width: 86vw; background: rgba(8, 20, 32, .88); border-left: 5px solid #ffd23e; border-radius: 8px; padding: 12px 16px; }
+  #dialogue-title { font-size: 15px; font-weight: 800; color: #ffd23e; margin-bottom: 4px; }
+  #dialogue-text { font-size: 15px; line-height: 1.45; }
+  #minimap { position: absolute; right: 16px; bottom: 16px; width: 180px; height: 180px; border: 2px solid rgba(255,255,255,.6); border-radius: 8px; background: rgba(10,26,40,.8); }
+  #hint { left: 16px; bottom: 14px; font-size: 13px; opacity: .85; background: rgba(0,0,0,.4); padding: 6px 10px; border-radius: 6px; max-width: 60vw; }
+  #title-card { display: none; top: 150px; left: 50%; transform: translateX(-50%); text-align: center; }
+  #title-card b { display: block; font-size: 54px; letter-spacing: 6px; color: #fff; text-shadow: 0 3px 0 #e8a33d, 0 6px 18px rgba(0,0,0,.6); }
+  #title-card span { font-size: 16px; color: #ffe9a8; }
+  #menu { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; flex-direction: column; background: linear-gradient(180deg, rgba(6,18,30,.82), rgba(6,18,30,.68)); color: #fff; text-align: center; z-index: 10; }
+  #menu-title { font-size: 56px; font-weight: 900; letter-spacing: 8px; color: #ffd23e; text-shadow: 0 3px 0 #b97a1e, 0 8px 24px rgba(0,0,0,.7); }
+  #menu-text { font-size: 18px; max-width: 620px; line-height: 1.5; margin: 14px 20px; }
+  #menu-sub { font-size: 15px; opacity: .85; }
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="topleft" class="panel">
+  <div class="row" id="money">$250</div>
+  <div class="row" id="healthbar-wrap"><div id="healthbar"></div></div>
+  <div class="row" id="health"><span id="health-num"></span></div>
+  <div class="row" id="ammo">Ammo 24</div>
+</div>
+<div id="topright" class="panel">
+  <div id="stars">☆☆☆☆☆</div>
+  <div id="clock">08:00</div>
+  <div id="speed"></div>
+</div>
+<div id="mission" class="panel">
+  <div id="mission-title">Free roam</div>
+  <div id="mission-objective"></div>
+  <div id="mission-timer"></div>
+</div>
+<div id="flash" class="panel"></div>
+<div id="dialogue" class="panel">
+  <div id="dialogue-title">Mara Voss</div>
+  <div id="dialogue-text"></div>
+</div>
+<div id="title-card" class="panel"></div>
+<canvas id="minimap" width="180" height="180"></canvas>
+<div id="hint" class="panel"></div>
+<div id="menu">
+  <div id="menu-title">SOLMAR BAY</div>
+  <div id="menu-text"></div>
+  <div id="menu-sub"></div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
