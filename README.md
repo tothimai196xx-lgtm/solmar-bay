@@ -1,8 +1,8 @@
 # Solmar Bay — open-world crime game
 
-[![make.fun](https://img.shields.io/badge/make.fun-gta6--01-blue)](https://make.fun/bounty/gta6-01)
-[![rank](https://img.shields.io/badge/rank-unranked-lightgrey)](https://make.fun/bounty/gta6-01)
-[![reward](https://img.shields.io/badge/reward-%241%2C666_USDC-green)](https://make.fun/bounty/gta6-01)
+[![make.fun · gta6-01](https://make.fun/badge/gta6-01.svg)](https://make.fun/bounty/gta6-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+[![rank](https://make.fun/badge/gta6-01/tothimai196xx-lgtm/solmar-bay/rank.svg)](https://make.fun/bounty/gta6-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+[![reward](https://make.fun/badge/gta6-01/tothimai196xx-lgtm/solmar-bay/reward.svg)](https://make.fun/bounty/gta6-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
 
 **Solmar Bay** is an original open-world crime game built for make.fun's
 "Make GTA 6" bounty (gta6-01, repo `solmar-bay`). You are Rio Calder, a driver
