@@ -1,3 +1,4 @@
+# Build outputs, kit and local notes — not part of the entry
 kit/
 kit.tar.gz
 out/
@@ -5,3 +6,6 @@ requirements.json
 BUILD-TASK.md
 PREP-NOTES.md
 prompt-user.txt
+*.log
+node_modules/
+.DS_Store
